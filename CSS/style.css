@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* --------- IMPORTING STYLES --------- */
+@import url('header.css');
+@import url('tables.css');
+@import url('add-products.css');
+@import url('orders.css');
+@import url('product-to-add.css');
+@import url('product.css');
+
+/* ---------- THE RESET STYLINGS ---------- */
+*
+{
+    margin: 0px;
+    padding:0px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+a
+{
+  text-decoration: none;
+  color: inherit;
+}
+h2
+{
+  color: var(--text-color);
+}
+li
+{
+  list-style-type: none;
+}
+/* ---------- THE ROOT STYLINGS ---------- */
+:root
+{
+  --primary-color: #003d29;
+  --primary-color: black;;
+  --secondary-color: #009879;
+  --text-color: #231f1e;
+  --misty-rose: #f9dcdc;
+  --white-smoke: #f5f6f6;
+  --linen: #f2e4d9;
+  --white-color: #fcfcfc;
+  --light-cyan: #d2f7ec;
+  --margin-top: 80px;
+  --padding: 0 60px;
+  --mobile-padding: 0 20px;
+}
+
+/* ------------ UTILITY CLASSES -------------- */
+.container{
+  width: min(1300px, 90%);
+  margin-inline: auto;
+}
+.dashboard_content{
+  padding-top: 100px;
+}
+.flex
+{
+  display: flex;
+}
+.flex-align
+{
+  align-items: center;
+}
+.flex-justify-center
+{
+  justify-content: center;
+}
+.flex-center
+{
+  align-items: center;
+  justify-content: center; 
+}
+.flex-justify-between
+{
+  justify-content: space-between;
+}
+.flex-column
+{
+  flex-direction: column;
+}
+.display-none
+{
+  display: none;
+  
+}
+.main-container
+{
+  position: relative;
+}

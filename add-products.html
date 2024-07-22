@@ -73,10 +73,9 @@
         </nav>
     </header>
     <section class="dashboard_content">
-        <div class="container products-to-add ">
+        <div class="container products-to-add">
           <h2 class="flex flex-justify-center">Add a Product</h2>
-          <form action="" class="flex flex-center">
-            
+          <form id="productForm" class="flex flex-center">
             <div class="form-left">
                 <div class="large-images-previewer">
                   <div class="large-image">
@@ -91,18 +90,10 @@
                   </div>
                 </div>
                 <div class="small-images-wrapper">
-                  <div>
-                    <img src="/Images/image_placeholder.jpg" alt="" class="small-image">
-                  </div>                    
-                  <div>
-                    <img src="/Images/image_placeholder.jpg" alt="" class="small-image">
-                  </div>                    
-                  <div>
-                    <img src="/Images/image_placeholder.jpg" alt="" class="small-image">
-                  </div>                    
-                  <div>
-                    <img src="/Images/image_placeholder.jpg" alt="" class="small-image">
-                  </div>                    
+                  <div><img src="/Images/image_placeholder.jpg" alt="" class="small-image"></div>
+                  <div><img src="/Images/image_placeholder.jpg" alt="" class="small-image"></div>
+                  <div><img src="/Images/image_placeholder.jpg" alt="" class="small-image"></div>
+                  <div><img src="/Images/image_placeholder.jpg" alt="" class="small-image"></div>
                 </div>
                 <div class="image-input-title">
                   <p>Add Product Images (min 1, max 4)</p><br>
@@ -135,12 +126,14 @@
                   <textarea id="description" placeholder="product description"></textarea>
                   <div><span>200 characters left</span></div>
                 </div>
-                <button type="button">Add Product</button>
+                <button type="submit">Add ProducT</button>
             </div>
           </form>
         </div>
       </section>
-     
-      <script src="/Javascript/add-products.js"></script>
+      <script type="module" src="Javascript/add-products.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js"></script>
+      <script src="firebaseConfig.js"></script>
 </body>
 </html>

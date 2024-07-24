@@ -1,9 +1,9 @@
-
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js';
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js';
+import { getStorage } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js';
 
 // Your Firebase configuration
-const firebaseConfig = {
+export const firebaseConfig = {
     apiKey: "AIzaSyC_hPXCXTa42PL_jRDZ7FIP7rNoJrqQaUA",
     authDomain: "student-e-commerce.firebaseapp.com",
     projectId: "student-e-commerce",
@@ -16,7 +16,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const storage = getStorage(app);
 
-export { db };
-
-
+export { db, storage };

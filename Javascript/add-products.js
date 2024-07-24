@@ -1,6 +1,6 @@
-// main.js
 import { db } from '../firebaseConfig.js';
 import { collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentImageIndex = 0;
   let imagesArray = [];
+  let imageFiles = [];
 
   function updateLargeImage() {
     if (imagesArray.length > 0) {
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     removeLargeImageButton.style.display = (largeImage.src !== defaultImageSrc) ? 'block' : 'none';
   }
 
-  imageInput.addEventListener('change', function(event) {
+  imageInput.addEventListener('change', async function(event) {
     const files = event.target.files;
     const maxFiles = 4;
 
@@ -53,11 +54,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
       reader.readAsDataURL(file);
+
+      // Upload image to Firebase Storage
+      const storageRef = ref(getStorage(), `images/${file.name}`);
+      imageFiles.push(file); // Save file for later use
+      uploadBytes(storageRef, file)
+        .then(() => console.log('Image uploaded successfully!'))
+        .catch((error) => console.error('Error uploading image:', error));
     });
   });
 
   clearAllButton.addEventListener('click', function() {
     imagesArray = [];
+    imageFiles = [];
     smallImages.forEach(img => {
       img.src = defaultImageSrc;
     });
@@ -70,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   removeLargeImageButton.addEventListener('click', function() {
     if (imagesArray.length > 0) {
       imagesArray.splice(currentImageIndex, 1);
+      imageFiles.splice(currentImageIndex, 1);
 
       for (let i = currentImageIndex; i < smallImages.length; i++) {
         if (i < imagesArray.length) {
@@ -92,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
       currentImageIndex = (currentImageIndex - 1 + imagesArray.length) % imagesArray.length;
       updateLargeImage();
     }
-    console.log(leftArrow);
   });
 
   rightArrow.addEventListener('click', function() {
@@ -111,6 +120,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const qty = document.getElementById('qty').value;
     const description = document.getElementById('description').value;
 
+    // Upload images and get URLs
+    const imageUrls = [];
+    for (const file of imageFiles) {
+      const storageRef = ref(getStorage(), `images/${file.name}`);
+      try {
+        await uploadBytes(storageRef, file);
+        const url = await getDownloadURL(storageRef);
+        imageUrls.push(url);
+      } catch (error) {
+        console.error('Error uploading image:', error);
+        alert('Error uploading image: ' + error.message);
+      }
+    }
+
+    // Add product to Firestore
     try {
       const docRef = await addDoc(collection(db, "products"), {
         name: name,
@@ -118,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         category: category,
         qty: parseInt(qty),
         description: description,
+        images: imageUrls,
         createdAt: new Date()
       });
       console.log("Document written with ID: ", docRef.id);
@@ -128,6 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.getElementById('productForm').reset();
+    imagesArray = [];
+    imageFiles = [];
+    smallImages.forEach(img => {
+      img.src = defaultImageSrc;
+    });
+    updateLargeImage();
   });
 
   updateRemoveButtonVisibility();

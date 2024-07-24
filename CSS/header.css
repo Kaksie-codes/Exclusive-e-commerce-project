@@ -5,6 +5,10 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
+    
+  }
+  .main-nav{
+    border-bottom: 1px solid #8c8989;
   }
   .main-nav .container{  
     height: 60px;  

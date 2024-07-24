@@ -1,0 +1,120 @@
+.dark-nav{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 30px;
+}
+.dark-nav .container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.dark-nav .container div{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px;   
+}
+.dark-nav .container p{
+    font-size: 13px;
+}
+.dark-nav .container a{
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.signup-screen{    
+    /* margin-top: 10px; */
+    /* background-color: yellow; */
+    display: flex;
+    height: calc(100vh - 90px);
+    max-height: 1000px;
+    position: relative;
+}
+
+.signup-screen .left{
+    flex: 0.5;
+    /* background-color: blue; */
+    height: 100%;
+    padding-top: 10px;
+}
+.signup-screen .left .banner{
+    width: 100%;
+    /* background-color: red;     */
+    height: 100%;
+}
+.signup-screen .banner img{
+    width: 100%;   
+    height: 100%;
+    object-fit: cover;
+}
+.signup-screen .right{
+    flex: 0.5;
+    /* background-color: green; */
+    height: 100%;
+}
+.signup-screen .content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background-color: brown; */
+    height: 100%;
+    width: 100%;    
+}
+.signup-screen .content .container{    
+    display: flex;
+    height: 100%;
+    /* background-color: green; */
+}
+.signup-screen .content .content-left{
+    flex: 0.5;
+    height: 100%;
+    /* background-color: aqua; */
+}
+.signup-screen .content .signup-form{
+    /* background-color: blueviolet; */
+    flex: 0.5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 30px;
+}
+.signup-form form{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 30px; */
+    margin-top: 10px;
+    /* align-items: center; */
+    justify-content: center;
+    /* height: 100%; */
+    gap: 10px;
+}
+.signup-form input{
+    outline: none;
+    border: none;
+    border-bottom:  1px solid black;
+    padding: 7px 0;
+}
+.signup-form button{
+    color: white;
+    background-color: rgb(220, 28, 60);
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+.signup-form div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.signup-form div a{
+    text-decoration: underline;
+}
+

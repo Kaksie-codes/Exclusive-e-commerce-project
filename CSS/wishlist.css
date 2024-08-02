@@ -1,0 +1,22 @@
+.header
+{
+    font-size: 18px;
+}
+.header-btn
+{
+    font-size: 15px; 
+    /* text-align: center; */
+    /* height: 30px; 
+    width: 30px; */
+    font-weight: bold;
+    border: 1px solid;
+    padding: 15px 30px;
+    border-radius: 3px;
+    background-color: #fcfcfc;
+    
+}
+.just
+{
+    color: #000000;
+    margin-left: 10px;
+}

@@ -1,0 +1,31 @@
+.home-product-details span{
+    padding: 10px;
+    font-size: 15px;
+}
+.product-details-setion{
+    gap: 30px;
+}
+.product-column-images{
+    /* flex: 1; */
+}
+.product-details-image-container{
+    width: 200px;
+    height: 150px;
+    margin: 30px 0;
+}
+.product-details-image-container img{
+    width: 80%;
+    height: 120px;
+    object-fit: contain; 
+}
+.main-container{
+    width: 600px;
+    height: 690px;
+    margin-top: 30px;
+    /* flex: 3; */
+}
+.main-container img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}

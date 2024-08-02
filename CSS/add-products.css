@@ -108,6 +108,8 @@
     padding: 15px 10px;
     border-radius: 10px;
     resize: none;
+    height: fit-content !important;
+    min-height: 200px !important;
 }
 .form-right button{
     background-color: black;

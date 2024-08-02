@@ -5,10 +5,12 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    
+    z-index: 300;    
   }
   .main-nav{
     border-bottom: 1px solid #8c8989;
+    position: relative;
+    z-index: 300;   
   }
   .main-nav .container{  
     height: 60px;  

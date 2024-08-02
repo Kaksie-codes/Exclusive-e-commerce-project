@@ -36,9 +36,6 @@
 body{
   background:#fcfcfc;
   width: 100vw;
-}body{
-  background:#fcfcfc;
-  width: 100vw;
 }
 a
 {
@@ -57,6 +54,7 @@ li
 :root
 {
   --primary-color: #000000;
+  --maroon-color: #DB4444;
   --text-color: #231f1e;
   --misty-rose: #f9dcdc;
   --white-smoke: #f5f6f6;

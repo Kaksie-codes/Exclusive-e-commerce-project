@@ -1,4 +1,4 @@
-.dashboard-header{
+/* .dashboard-header{
     position: fixed;
     background-color: var(--white-color);
     top: 0;
@@ -11,18 +11,18 @@
     border-bottom: 1px solid #8c8989;
     position: relative;
     z-index: 300;   
-  }
-  .main-nav .container{  
-    height: 60px;  
+  } */
+  /* .main-nav .container{  
+      
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .main-nav ul{
+  } */
+  /* .main-nav ul{
     display: flex;
     gap: 20px;
-  }
-  .main-nav .input-wrapper{
+  } */
+  /* .main-nav .input-wrapper{
    display: flex;
    background-color: rgb(226, 220, 220);
    background-color: #f3f3f3;
@@ -34,14 +34,14 @@
    align-items: center;
    flex: 1;
    max-width: 350px;
-  }
-  .input-wrapper input{
+  } */
+  /* .input-wrapper input{
     border: none;
     outline: none;
     background-color: transparent;
     padding: 2px 5px;
     flex: 1;
-  }
+  } */
   .dashboard-nav
   {
     background-color: var(--primary-color);

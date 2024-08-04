@@ -6,8 +6,8 @@
 
 
 /* --------- IMPORTING STYLES --------- */
-@import url('main-header.css');
 @import url('header.css');
+@import url('homepage.css');
 @import url('tables.css');
 @import url('add-products.css');
 @import url('orders.css');
@@ -61,7 +61,7 @@ li
   --linen: #f2e4d9; 
   --white-color: #fcfcfc;
   --light-cyan: #d2f7ec;
-  --margin-top: 80px;
+  --margin-top: 10px;
   --padding: 0 60px;
   --mobile-padding: 0 20px;  
 }
@@ -71,9 +71,9 @@ li
   width: min(1300px, 90%);
   margin-inline: auto;
 }
-.dashboard_content{
+/* .dashboard_content{
   padding-top: 100px;
-}
+} */
 .flex
 {
   display: flex;
@@ -109,7 +109,7 @@ li
   position: relative;
 }
 section{
-  margin-top: var(--margin-top);
+  /* margin-top: var(--margin-top); */
   /* padding: var(--padding); */
 }
 .section-rectangle{

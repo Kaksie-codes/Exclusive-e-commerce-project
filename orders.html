@@ -8,166 +8,172 @@
   <title>Orders</title>
 </head>
 <body>
-  <div class="main-container">
-    <header class="dashboard-header">
-      <nav class="main-nav">
-          <div class="container">
-              <h1>Exclusive</h1>
+  <header class="main-header">
+    <nav class="main-nav">
+        <div class="container">
+            <h1>Exclusive</h1>
+            <ul>
+                <li class="active-page"><a href="/index.html">Home</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/signup.html">Signup</a></li>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="input-wrap">
+                    <input type="search" placeholder="what are you searching for?">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <img src="/Images/Wishlist.png" alt="wishlist icon">
+                <div id="cart-icon">
+                    <img src="/Images/cart.png" alt="cart icon">
+                    <span>2</span>
+                </div>
+                <img src="/Images/user_avatar.png" alt="user avatar">
+            </div>
+        </div>
+    </nav> 
+    <nav class="dashboard-nav">
+        <ul class="container">
+            <li>
+                <a href="/users.html">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    Users
+                </a>
+            </li> 
+            <li class="active-category">
+                <a href="/orders.html">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    Orders
+                </a>
+            </li>  
+            <li>
+                <a href="/add-products.html">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    Add product
+                </a>
+            </li>  
+            <li>
+                <a href="/products.html">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    Products
+                </a>
+            </li>                           
+        </ul>
+    </nav>
+</header>
+  <section class="dashboard_content">
+    <div class="container orders">
+      <h1>Welcome back, Iniemem</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              Order Number
+            </th>
+            <th>
+              Shipping to
+            </th>
+            <th>
+              Status
+            </th>
+            <th>
+              Items ordered
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Iniemem David
+            </td>
+            <td>
+              2G100075-78474-3434546
+            </td>
+            <td>
+              Lagos, Nigeria
+            </td>
+            <td>
+              Completed
+            </td>
+            <td>
               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Signup</a></li>
-                  <li><a href="#">Dashboard</a></li>
+                <li>2 black Hoddies with make over Love cards- 256</li>
+                <li>5 second basketball you loces</li>
+                <li>3 black socks</li>
               </ul>
-              <div class="input-wrapper">
-                  <input type="search" placeholder="what are you searching for?">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-          </div>
-      </nav>
-      <nav class="dashboard-nav">
-          <ul class="container">
-              <li>
-                  <a href="/users.html">
-                      <i class="fa fa-users" aria-hidden="true"></i>
-                      Users
-                  </a>
-              </li> 
-              <li class="active-category">
-                  <a href="/orders.html">
-                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                      Orders
-                  </a>
-              </li>  
-              <li>
-                  <a href="/add-products.html">
-                      <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                      Add product
-                  </a>
-              </li>  
-              <li>
-                  <a href="/products.html">
-                      <i class="fa fa-briefcase" aria-hidden="true"></i>
-                      Products
-                  </a>
-              </li>                           
-          </ul>
-      </nav>
-  </header>
-    <section class="dashboard_content">
-      <div class="container orders">
-        <h1>Welcome back, Iniemem</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>
-                Name
-              </th>
-              <th>
-                Order Number
-              </th>
-              <th>
-                Shipping to
-              </th>
-              <th>
-                Status
-              </th>
-              <th>
-                Items ordered
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                Iniemem David
-              </td>
-              <td>
-                2G100075-78474-3434546
-              </td>
-              <td>
-                Lagos, Nigeria
-              </td>
-              <td>
-                Completed
-              </td>
-              <td>
-                <ul>
-                  <li>2 black Hoddies with make over Love cards- 256</li>
-                  <li>5 second basketball you loces</li>
-                  <li>3 black socks</li>
-                </ul>
-              </td>
-            </tr>           
-            <tr>
-              <td>
-                Okon Ekpo
-              </td>
-              <td>
-               2G100075-78474-3434546
-              </td>
-              <td>
-                Lagos, Nigeria
-              </td>
-              <td>
-                In-transit
-              </td>
-              <td>
-                <ul>
-                  <li>2 black Hoddies with make over Love cards- 256</li>
-                  <li>5 second basketball you loces</li>
-                  <li>3 black socks</li>
-                </ul>
-              </td>
-            </tr>           
-            <tr>
-              <td>
-                Iniemem David
-              </td>
-              <td>
-                2G100075-78474-3434546
-              </td>
-              <td>
-                Lagos, Nigeria
-              </td>
-              <td>
-                Completed
-              </td>
-              <td>
-                <ul>
-                  <li>2 black Hoddies with make over Love cards- 256</li>
-                  <li>5 second basketball you loces</li>
-                  <li>3 black socks</li>
-                </ul>
-              </td>
-            </tr>           
-            <tr>
-              <td>
-                Okon Ekpo
-              </td>
-              <td>
-               2G100075-78474-3434546
-              </td>
-              <td>
-                Lagos, Nigeria
-              </td>
-              <td>
-                Pending
-              </td>
-              <td>
-                <ul>
-                  <li>2 black Hoddies with make over Love cards- 256</li>
-                  <li>5 second basketball you loces</li>
-                  <li>3 black socks</li>
-                </ul>
-              </td>
-            </tr>           
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </div>
+            </td>
+          </tr>           
+          <tr>
+            <td>
+              Okon Ekpo
+            </td>
+            <td>
+             2G100075-78474-3434546
+            </td>
+            <td>
+              Lagos, Nigeria
+            </td>
+            <td>
+              In-transit
+            </td>
+            <td>
+              <ul>
+                <li>2 black Hoddies with make over Love cards- 256</li>
+                <li>5 second basketball you loces</li>
+                <li>3 black socks</li>
+              </ul>
+            </td>
+          </tr>           
+          <tr>
+            <td>
+              Iniemem David
+            </td>
+            <td>
+              2G100075-78474-3434546
+            </td>
+            <td>
+              Lagos, Nigeria
+            </td>
+            <td>
+              Completed
+            </td>
+            <td>
+              <ul>
+                <li>2 black Hoddies with make over Love cards- 256</li>
+                <li>5 second basketball you loces</li>
+                <li>3 black socks</li>
+              </ul>
+            </td>
+          </tr>           
+          <tr>
+            <td>
+              Okon Ekpo
+            </td>
+            <td>
+             2G100075-78474-3434546
+            </td>
+            <td>
+              Lagos, Nigeria
+            </td>
+            <td>
+              Pending
+            </td>
+            <td>
+              <ul>
+                <li>2 black Hoddies with make over Love cards- 256</li>
+                <li>5 second basketball you loces</li>
+                <li>3 black socks</li>
+              </ul>
+            </td>
+          </tr>           
+        </tbody>
+      </table>
+    </div>
+  </section>
   <footer>
     <div class="container">
         <div class="footer-content">

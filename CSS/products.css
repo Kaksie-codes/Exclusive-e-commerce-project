@@ -3,11 +3,14 @@
    padding-bottom: 30px;
 }
 .dashboard_content .filters{
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+.dashboard_content .filters .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 40px;
-    /* background-color: aquamarine; */
+    height: 100%;    
 }
 .dashboard_content .filters .right{
     display: flex;

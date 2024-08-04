@@ -8,23 +8,31 @@
     <title>Products</title>    
 </head>
 <body>
-    <header class="dashboard-header">
+    <header class="main-header">
         <nav class="main-nav">
             <div class="container">
                 <h1>Exclusive</h1>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Signup</a></li>
-                    <li><a href="#">Dashboard</a></li>
+                    <li class="active-page"><a href="/index.html">Home</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/signup.html">Signup</a></li>
+                    <li><a href="/dashboard.html">Dashboard</a></li>
                 </ul>
-                <div class="input-wrapper">
-                    <input type="search" placeholder="what are you searching for?">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="nav-right">
+                    <div class="input-wrap">
+                        <input type="search" placeholder="what are you searching for?">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <img src="/Images/Wishlist.png" alt="wishlist icon">
+                    <div id="cart-icon">
+                        <img src="/Images/cart.png" alt="cart icon">
+                        <span>2</span>
+                    </div>
+                    <img src="/Images/user_avatar.png" alt="user avatar">
                 </div>
             </div>
-        </nav>
+        </nav> 
         <nav class="dashboard-nav">
             <ul class="container">
                 <li>
@@ -39,13 +47,13 @@
                         Orders
                     </a>
                 </li>  
-                <li>
+                <li class="active-category">
                     <a href="/add-products.html">
                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                         Add product
                     </a>
                 </li>  
-                <li class="active-category">
+                <li>
                     <a href="/products.html">
                         <i class="fa fa-briefcase" aria-hidden="true"></i>
                         Products
@@ -55,30 +63,32 @@
         </nav>
     </header>
     <section class="dashboard_content">
-        <div class="container">
-          <div class="filters">
-            <div class="right">
-                <div>
-                    <span>Category:</span>
-                    <select id="categoryFilter">
-                        <option value="all">All</option>
-                    </select>
+        <div class="filters">
+            <div class="container">
+                <div class="right">
+                    <div>
+                        <span>Category:</span>
+                        <select id="categoryFilter">
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Price Range:</span>
+                        <select id="priceFilter">
+                            <option value="all">All</option>
+                            <option value="cheap">Cheap</option>
+                            <option value="average">Average</option>
+                            <option value="expensive">Expensive</option>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <span>Price Range:</span>
-                    <select id="priceFilter">
-                        <option value="all">All</option>
-                        <option value="cheap">Cheap</option>
-                        <option value="average">Average</option>
-                        <option value="expensive">Expensive</option>
-                    </select>
+                <div class="input-wrapper">
+                    <input type="search" id="searchInput" placeholder="Search for product by name">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-            </div> 
-            <div class="input-wrapper">
-                <input type="search" id="searchInput" placeholder="Search for product by name">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div> 
+            </div>
           </div>
+        <div class="container">          
           <div id="loadingMessage" style="display: none;">Loading...</div>
           <div id="productsList"></div>
         </div>
